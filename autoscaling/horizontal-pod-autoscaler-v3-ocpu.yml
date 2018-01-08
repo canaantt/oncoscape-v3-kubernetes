@@ -1,7 +1,7 @@
 apiVersion: autoscaling/v1
 kind: HorizontalPodAutoscaler
 metadata:
-  name: hpa-python-autoscaler
+  name: hpa-python-autoscaler-ocpu
 spec:
   scaleTargetRef:
     apiVersion: extensions/v1beta1
