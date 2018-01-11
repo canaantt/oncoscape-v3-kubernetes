@@ -17,6 +17,6 @@ spec:
       paths:
       - path: /
         backend:
-          serviceName: helloworld-v2
+          serviceName: ocpu
           servicePort: 80
           

@@ -14,7 +14,7 @@ spec:
         image: canaantt/notitia-ocpu:latest
         ports:
         - name: ocpu-port
-          containerPort: 80
+          containerPort: 8004
 ---
 apiVersion: v1
 kind: Service
