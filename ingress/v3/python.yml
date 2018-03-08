@@ -11,7 +11,7 @@ spec:
     spec:
       containers:
       - name: notitia-python
-        image: canaantt/notitia-python:latest
+        image: canaantt/notitia-python:v2
         ports:
         - name: python-port
           containerPort: 80
