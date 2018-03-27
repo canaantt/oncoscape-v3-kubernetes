@@ -1,0 +1,32 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: deployment-oncoscapev2-dev
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: oncoscapev2-dev
+    spec:
+      containers:
+      - name: oncoscapev2-dev
+        image: fredhutch/oncoscape:develop
+        ports:
+        - name: v2-dev-port
+          containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: v2-dev
+spec:
+  type: NodePort
+  ports:
+  - port: 80
+    targetPort: v2-dev-port
+    protocol: TCP
+    name: http
+  selector:
+    app: oncoscapev2-dev
+    
